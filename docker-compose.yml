@@ -144,6 +144,9 @@ services:
     networks:
       hadoop_network:
         ipv4_address: ${IP_NOTE}
+    depends_on:
+      node:
+        condition: service_started
 
 networks:
   hadoop_network:
